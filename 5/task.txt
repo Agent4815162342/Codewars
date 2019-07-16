@@ -1,0 +1,39 @@
+Story & Task
+Mr. Mxyzinjin is the greatest kata author in the world. He has many fans around the world.
+
+Today, he received letters from x fans. Fans want to get his autographed photos. But, he has only n photos.
+
+He plans to select n people from these fans and send out his photos.
+
+According to the order of the letters, he gave each fan a ID number(let's say, id1), from 1 to x, where x is the total number of fans.
+
+According to his initial impression, he gave each fan an initial weight.
+
+Reordering the fans according to the initial weights, from big to small. If two fans have the same initial weight, the fan who has smaller id1 value is in front.
+
+According to the order of current sequence, he gave each fan a new ID number(let's say, id2), from 1 to x, where x is the total number of fans.
+
+He divided the fans into 10 kinds, according to the value of id2 mod 10. For example, 1, 11 and 21 are the same kind, 2, 12,22 are the same kind, etc.
+
+Each kind of fans will plus a special weight.
+
+Reordering the fans according to the current weights, from big to small. If two fans have the same weight, the fan who has smaller id1 value is in front. (Note, id1, not id2)
+
+Finally, pick n fans from big weight to small weight, and send out his photos.
+
+You are given the initial weights, special weight, and n. Your task is to sort the data and select n fans, return their id (id1).
+
+Input
+initWeights. An integer array. Each element is the initial weight of each fan, according to the order of the letters. 3<= initWeights.length <= 10000
+
+specWeights. An integer array. It always contains 10 elements, and each element represents a special weight of a kind of fans. 1st element for kind 1, 2nd element for kind2, and so on..
+
+n. A positive integer. The number of selected fans. 1 <= n <= 200 and n <= initWeights.length
+
+Output
+An array of n fans' ids(id1), according to the order of final result after sort operations.
+
+Example
+For initWeights = [1,2,3,4], specWeights = [1,1,1,100,0,0,0,0,0,0], and n = 3,
+
+The output should be [1,4,3]
