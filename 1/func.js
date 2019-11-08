@@ -17,7 +17,7 @@ if (encryptedText === null || !encryptedText.split.length) return encryptedText;
   let arr = encryptedText.split('');
   let result = [];
   if (n <= 0) {
-    return arr.join('');
+    return arr.join('')
   }
   let num = Math.floor(arr.length/2);
   let j = 1;
@@ -25,7 +25,7 @@ if (encryptedText === null || !encryptedText.split.length) return encryptedText;
      if (i%2 == 0) {
        result[i] = arr[num + i - j + 1];
      } else {
-       result[i] = arr[i-j];
+       result[i] = arr[i-j]
        j++;
      }
    };
